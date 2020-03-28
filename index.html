@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div class="proto-container">
+    <div class="proto"></div>
+    <div class="proto"></div>
+    <div class="proto"></div>
+    <div class="proto"></div>
+  </div>
+
+  <div class="container">
+    <div class="outer">
+      <img src="images/SCENE@2x.pn" alt = "SCENE" class="logo">
+      
+      <div class="tab">
+        <button class="tablinks" onclick="openList(event, 'TrendingContents')" id="defaultOpen">Trending</button>
+        <button class="tablinks" onclick="openList(event, 'TrendingContents')">Saved</button>
+        <button class="tablinks" onclick="openList(event, 'TrendingContents')">Latest</button>
+      </div>
+
+      <div class="inner">
+        <div class="search">
+          <button>
+            <img src="images/Search.png">
+          </button>
+          <input type="text" name="search" id = "search" placeholder="Search Scene">
+          </div>
+
+          <div id="TrendingContents" class="scope">
+            
+            <!--Video #1-->
+            <div class="video">
+              <img src="images/emptyny@2x.png" alt = "THUMBNAIL1" class = "thumbnail">
+              <!-- </div> -->
+              <div class="rank">
+                <span>#2 Trending</span>
+              </div>
+              
+              <div class="Headline">
+                <span>BREAKING: Coronavirus Forces New York’s <br/>Strip To Close </span>
+              </div>
+              <div class="video_stats">
+                <div id="R">
+                  <span>R</span>
+                </div>
+              <button>
+                <div class="user">
+                  <span>richardjaey</span>
+                </div>
+              </button>
+                <div class="views">
+                  <span>1.3T views</span>
+                </div>
+                <div class="post">
+                  <span>10 hours ago</span>
+                </div>
+              </div>
+              <div class="Description">
+                <span>New York City is empty as Coronavirus fears spread across the <br/>city. The most crowded places are now deserted. This ghost…</span>
+              </div>
+            </div> <!--END OF VIDEO 1 -->
+            
+            <!--Video #2-->
+            <div class="video">
+              <img src="images/Ventilator.png" alt = "THUMBNAIL1" class = "thumbnail">
+              <!-- </div> -->
+              <div class="rank">
+                <span>#1 Trending</span>
+              </div>
+              
+              <div class="Headline">
+                <span>Low Supply in Masks and Beds Scare<br/>Doctors as Coronavirus Cases Increase</span>
+              </div>
+              <div class="video_stats">
+                <div id="R">
+                  <span>R</span>
+                </div>
+                <button>
+                <div class="user">
+                  <span>richardjaey</span>
+                </div>
+                </button>
+                  <div class="views">
+                    <span>91B views</span>
+                  </div>
+                <div class="post">
+                  <span>23 hours ago</span>
+                </div>
+              </div>
+              <div class="Description">
+                <span>The state of California has called an emergency in the sudden<br/>low supply in medical supplies to treat Coronavirus patients…</span>
+              </div>
+            </div> <!--END OF VIDEO 2 -->
+            
+          <!-- END OF VIDEO SCOPE -->
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openList(evt, tabName) {
+    var i, tabcontent, tablinks;
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+
+  //Get the element with id="defaultOpen" and click on it
+  document.getElementById("defaultOpen").click();
+  </script>
+</body>
+</html>
